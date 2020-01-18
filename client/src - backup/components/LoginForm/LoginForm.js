@@ -17,7 +17,7 @@ class LoginForm extends Component {
       username: username,
       password: password
     }
-    axios.post('https://raduno-backend.herokuapp.com//login', data).then(results => {
+    axios.post('https://raduno-backend.herokuapp.com/login', data).then(results => {
       console.log(results);
       if (results.data.Success === true) {
         sessionStorage.setItem('userInfo', JSON.stringify(results.data.Data));
@@ -36,7 +36,7 @@ class LoginForm extends Component {
       firstName: firstName,
       lastName: lastName
     }
-    axios.post('https://raduno-backend.herokuapp.com//signUp', data).then(results => {
+    axios.post('https://raduno-backend.herokuapp.com/signUp', data).then(results => {
       if (results.data.Success === true) {
         sessionStorage.setItem('userInfo', JSON.stringify(results.data.Data));
         window.location.href = '/dashboard';
