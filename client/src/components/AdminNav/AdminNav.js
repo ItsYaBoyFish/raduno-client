@@ -93,7 +93,7 @@ class AdminNav extends React.Component {
     if (userInfo !== null) {
       var userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
       event.preventDefault();
-      axios.post('https://raduno-backend.herokuapp.com//event/create', {
+      axios.post('https://raduno-backend.herokuapp.com/event/create', {
         user_id: userInfo.id,  
         eventName: this.state.eventName,
         eventHost: this.state.eventHost,

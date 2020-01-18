@@ -11,7 +11,7 @@ class EventCard extends React.Component{
         var userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
         console.log(userInfo)
         if (userInfo !== null) {
-            axios.get(`https://raduno-backend.herokuapp.com//myEvents/${userInfo.id}`).then(results => {
+            axios.get(`https://raduno-backend.herokuapp.com/myEvents/${userInfo.id}`).then(results => {
                 // console.log(results.data.upcomingEvents);
                 this.setState({
                     upcomingEvents: results.data.UpcomingEvents,
