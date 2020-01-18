@@ -55,8 +55,8 @@ class EventNav extends React.Component {
   handleRsvpFormSubmit = event =>{
     event.preventDefault();
 
-    Axios.post(`https://raduno-backend.herokuapp.com/event/rsvp/${this.state.eventInfo[0].event_id}`, {
-      event_id: this.state.rsvpInfo[0].event_id,
+    Axios.post(`https://raduno-backend.herokuapp.com/event/rsvp/${this.state.eventInfo[0].id}`, {
+      event_id: this.state.rsvpInfo[0].id,
       rsvpName: this.state.rsvpName,
       rsvpNumberInParty: this.state.rsvpNumberInParty,
       rsvpTypeofDish: this.state.rsvpTypeofDish,
