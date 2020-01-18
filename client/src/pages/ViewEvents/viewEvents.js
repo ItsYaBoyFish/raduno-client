@@ -20,7 +20,7 @@ class viewEvents extends Component {
 
   componentDidMount() {
     var query = window.location.pathname;
-    axios.get(query).then((results) => {
+    axios.get(`https://raduno-backend.herokuapp.com${query}`).then((results) => {
       console.log(results.data);
     this.setState({
         eventInfo: results.data.EventInfo,
